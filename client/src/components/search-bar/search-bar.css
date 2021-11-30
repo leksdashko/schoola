@@ -1,0 +1,24 @@
+.search-bar {
+    padding-top: 250px;
+    min-height: 100vh;
+    background: url(schoola-min-background.svg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+@media (min-width: 1366px) {
+    .search-bar{
+        min-height: auto;
+    }
+}
+
+.search-form-wrapper {
+    background: url(search-text-bg.svg) right 10px bottom 10px no-repeat, #B1ECBB;
+    padding: 80px 0 140px;
+    margin-top: -32px;
+    height: calc(100vh - 345px);
+}
+@media (min-width: 1366px) {
+    .search-form-wrapper {
+        height: auto;
+    }
+}
