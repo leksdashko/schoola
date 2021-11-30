@@ -1,10 +1,12 @@
-import Header from "./components/Header";
+import React from 'react';
+import Header from "./components/header";
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header/>
-    </div>
+    </BrowserRouter>
   );
 }
 

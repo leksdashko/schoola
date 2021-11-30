@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import './css/fonts.css';
+import './css/main.css';
 
 export const Context = createContext(null);
 

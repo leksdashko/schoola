@@ -1,0 +1,32 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.header.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.top-menu a {
+    margin: 0 15px;
+    transition: 0.1s;
+}
+.top-menu .active, .top-menu a:hover {
+    font-weight: 900;
+}
+.top-menu a:first-child:hover {
+    font-weight: 900;
+    padding-left: 0.45rem !important;
+}
+.navbar-light .top-menu.navbar-nav .nav-link{
+    color: #373737;
+}
