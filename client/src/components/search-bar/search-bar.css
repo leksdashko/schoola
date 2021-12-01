@@ -1,9 +1,6 @@
 .search-bar {
     padding-top: 250px;
     min-height: 100vh;
-    background: url(schoola-min-background.svg) no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
 }
 @media (min-width: 1366px) {
     .search-bar{
@@ -12,7 +9,6 @@
 }
 
 .search-form-wrapper {
-    background: url(search-text-bg.svg) right 10px bottom 10px no-repeat, #B1ECBB;
     padding: 80px 0 140px;
     margin-top: -32px;
     height: calc(100vh - 345px);
@@ -21,4 +17,53 @@
     .search-form-wrapper {
         height: auto;
     }
+}
+
+.search-container {
+    background-color: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search-bar input {
+    border-radius: 3px 0 0 3px;
+    border: none;
+    width: calc(100% - 320px);
+    padding: 5px 0 5px 85px;
+    background: url(search-book-icon.svg) 40px 4px no-repeat;
+}
+.search-bar button {
+    border-radius: 0 3px 3px 0;
+    background: #2dbc4d;
+    padding: 30px 0;
+    width: 240px;
+    border: none;
+    color: #ffffff;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -ms-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+.search-bar button:hover {
+    background: #5bcb6e;
+}
+
+.search-select-btn{
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    cursor: pointer;
+    background: url(../../static/chevron-bottom.svg) center center no-repeat;
+}
+.opened .search-select-btn {
+    transform: rotate(-180deg);
+    opacity: 0.25;
+}
+
+.search-title h1, .search-title h2 {
+    margin-bottom: 0;
 }

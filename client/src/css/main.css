@@ -1,18 +1,18 @@
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #d5d5d5;
-    font-size: 14px;
+    font-size: 16px;
 }
 ::-moz-placeholder { /* Firefox 19+ */
     color: #d5d5d5;
-    font-size: 14px;
+    font-size: 16px;
 }
 :-ms-input-placeholder { /* IE 10+ */
     color: #d5d5d5;
-    font-size: 14px;
+    font-size: 16px;
 }
 :-moz-placeholder { /* Firefox 18- */
     color: #d5d5d5;
-    font-size: 14px;
+    font-size: 16px;
 }
 :disabled {
     background-color: #d5d5d5 !important;
@@ -35,10 +35,14 @@ body.modal-open > :not(#modal-classic) {
 }
 a{
     color: #373737;
+    transition: 0.3s;
     text-decoration: none;
 }
 a:hover{
     text-decoration: none;
+}
+button{
+    transition: 0.3s;
 }
 .logo {
     font-weight: 900;
@@ -46,8 +50,46 @@ a:hover{
     line-height: 36px;
     letter-spacing: 0;
 }
+.title-font{
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 900;
+}
+.name-font{
+    font-weight: 900;
+    font-size: 30px;
+}
+.theme-light-bg{
+    background-color: #B1ECBB;
+}
+.theme-light-bg.with-brand{
+    background-image: url(../static/brand-light-bg.svg);
+    background-position: right 10px bottom 10px;
+    background-repeat: no-repeat;
+}
+.brands-bg{
+    background-image: url(../static/brands-white-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.theme-bg{
+    background-color: #B1ECBB;
+}
+.theme-bg.with-brand{
+    background-image: url(../static/brand-bg.svg);
+    background-position: right 10px bottom 10px;
+    background-repeat: no-repeat;
+}
+.color-gray{
+    color: #373737;
+}
 .theme-color{
     color: #2DBC4D !important;
+}
+.hover-theme-cl:hover{
+    color: #2DBC4D;
 }
 .btn-outline-theme{
     color: #2dbc4d;

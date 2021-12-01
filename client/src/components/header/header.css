@@ -13,6 +13,7 @@
     transition: 0.3s;
 }
 .header.navbar {
+    position: fixed;
     padding-top: 30px;
     padding-bottom: 30px;
 }
