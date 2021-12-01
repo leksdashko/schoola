@@ -6,7 +6,7 @@ import './choose-display.css';
 
 const ChooseDisplay = () => {
     return (
-        <div class="choose-display theme-light-bg with-brand">
+        <div className="choose-display theme-light-bg with-brand">
             <Container>
                 <Row>
                     <Col md={8}>

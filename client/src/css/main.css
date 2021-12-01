@@ -75,7 +75,7 @@ button{
     background-size: cover;
 }
 .theme-bg{
-    background-color: #B1ECBB;
+    background-color: #2DBC4D;
 }
 .theme-bg.with-brand{
     background-image: url(../static/brand-bg.svg);
@@ -85,11 +85,17 @@ button{
 .color-gray{
     color: #373737;
 }
+.color-white{
+    color: #fdfdfd;
+}
 .theme-color{
     color: #2DBC4D !important;
 }
 .hover-theme-cl:hover{
     color: #2DBC4D;
+}
+.hover-theme-light-cl:hover{
+    color: #B1ECBB;
 }
 .btn-outline-theme{
     color: #2dbc4d;
