@@ -18,6 +18,7 @@
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 7%);
 }
 .top-menu a {
     margin: 0 15px;

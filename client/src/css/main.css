@@ -39,6 +39,7 @@ a{
     text-decoration: none;
 }
 a:hover{
+    color: #373737;
     text-decoration: none;
 }
 button{
@@ -97,6 +98,14 @@ button{
 .hover-theme-light-cl:hover{
     color: #B1ECBB;
 }
+.btn-more {
+    font-weight: 500;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #999;
+}
+.btn-more:hover{
+    border-bottom: 1px solid transparent;
+}
 .btn-outline-theme{
     color: #2dbc4d;
     border: 2px solid #2DBC4D;
@@ -148,6 +157,26 @@ a.btn-theme{
 .btn-theme:hover{
     background: #B1ECBB;
 }
+.btn-theme-long {
+    width:100%;
+    background-color: #2dbc4d;
+    padding: 15px 60px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 7%);
+    transition: background 0.3s;
+}
+a.btn-theme-long{
+    color: #ffffff;
+}
+.btn-theme-long:hover{
+    background: #B1ECBB;
+}
+
 .navbar-light .navbar-nav .nav-link.btn-theme{
     color: #fff;
 }
