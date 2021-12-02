@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 //import {Context} from '../../index';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -8,8 +8,21 @@ import Container from "react-bootstrap/Container";
 import './header.css';
 
 const Header = () => {
+    const [fixed, setFixed] = useState('');
+
+    useEffect(() => {
+        headerFixed();
+        window.onscroll = () => {
+            headerFixed();
+        }
+    }, []);
+
+    function headerFixed() {
+        setFixed(window.pageYOffset > 15 ? 'fixed' : '');
+    }
+
     return (
-        <Navbar className="header" collapseOnSelect expand="lg">
+        <Navbar className={`header ${fixed}`} collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand>
                     <Link className="logo theme-color" to="/">Schoola</Link>
