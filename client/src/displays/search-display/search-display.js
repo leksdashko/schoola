@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './search-bar.css';
+import './search-display.css';
 import Container from "react-bootstrap/Container";
 
-const SearchBar = () => {
+const SearchDisplay = () => {
     return (
         <div className="search-bar brands-bg">
             <div className="search-text-wrapper">
@@ -40,4 +40,4 @@ const SearchBar = () => {
     );
 };
 
-export default SearchBar;
+export default SearchDisplay;
