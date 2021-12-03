@@ -6,6 +6,7 @@ import ChooseDisplay from './displays/choose-display/choose-display';
 import LinkListDisplay from './displays/link-list-display';
 import StepsDisplay from './displays/steps-display';
 import CardListDisplay from './displays/card-list-display/card-list-display';
+import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <CardListDisplay/>
       <LinkListDisplay/>
       <ChooseDisplay/>
+      <Footer/>
     </BrowserRouter>
   );
 }
