@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './search-display.css';
-import Container from "react-bootstrap/Container";
+import {Container,Row,Col} from "react-bootstrap";
 
 const SearchDisplay = () => {
     return (
@@ -16,9 +16,9 @@ const SearchDisplay = () => {
             </div>
             <div className="search-form-wrapper theme-light-bg with-brand">
                 <Container>
-                    <div className="row">
-                        <div className="col-md-10">
-                            <form action="#" id="search-form">
+                    <Row>
+                        <Col md={10}>
+                            <div>
                                 <div className="search-container">
                                     <input type="text" placeholder="Введите или выберите предмет из списка" />
                                     <span className="search-select-btn"></span>
@@ -31,9 +31,9 @@ const SearchDisplay = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         </div>

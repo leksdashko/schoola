@@ -60,6 +60,14 @@ button{
     font-weight: 900;
     font-size: 30px;
 }
+.name-font-large{
+    font-weight: 900;
+    font-size: 40px;
+}
+.font-description-large{
+    font-weight: 900;
+    font-size: 26px;
+}
 .fw-extra-bold{
     font-weight: 900;
 }

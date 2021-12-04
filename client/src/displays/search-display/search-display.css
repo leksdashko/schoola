@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 10%);
 }
 .search-bar input {
     border-radius: 3px 0 0 3px;

@@ -1,5 +1,5 @@
-import React, { useEffect, useState }  from 'react';
-import {Container, Row} from "react-bootstrap";
+import React from 'react';
+import {Container, Row, Col} from "react-bootstrap";
 
 import './steps-display.css';
 
@@ -9,28 +9,28 @@ const StepsDisplay = () => {
         <div className="steps-display">
             <Container>
                 <Row>
-                    <div className="offset-md-1 col-md-5">
-                        <div className="about-item">
-                            <h3>Найди своего репетитора</h3>
-                            <p>В нашей базе только проверенные преподаватели с реальными отзывами</p>
+                    <Col md={4} className="offset-md-2">
+                        <div className="step-item step-item-bg-1">
+                            <h3 className="name-font-large">Найди своего<br/>репетитора</h3>
+                            <p>В нашей базе только<br/>проверенные преподаватели<br/>с реальными отзывами</p>
                         </div>
-                    </div>
+                    </Col>
                 </Row>
                 <Row>
-                    <div className="offset-md-6 col-md-5">
-                        <div className="about-item">
-                            <h3>Подай заявку на обучение с репетитором</h3>
-                            <p>Твой преподаватель сразу же получит уведомление</p>
+                    <Col md={4} className="offset-md-6">
+                        <div className="step-item step-item-bg-2">
+                            <h3 className="name-font-large">Подай заявку<br/>на обучение<br/>с репетитором</h3>
+                            <p>Твой преподаватель сразу же<br/>получит уведомление</p>
                         </div>
-                    </div>
+                    </Col>
                 </Row>
                 <Row>
-                    <div className="offset-md-2 col-md-5">
-                        <div className="about-item">
-                            <h3>Начни своё обучение</h3>
-                            <p>Сразу после подтверждения преподавателем твоей заявки вы можете  начинать работу</p>
+                    <Col md={4} className="offset-md-3">
+                        <div className="step-item step-item-bg-3">
+                            <h3 className="name-font-large">Начни своё обучение</h3>
+                            <p>Сразу после подтверждения<br/>преподавателем твоей заявки Вы<br/>можете  начинать работу</p>
                         </div>
-                    </div>
+                    </Col>
                 </Row>
             </Container>
         </div>

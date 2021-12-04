@@ -7,6 +7,7 @@ import LinkListDisplay from './displays/link-list-display';
 import StepsDisplay from './displays/steps-display';
 import CardListDisplay from './displays/card-list-display/card-list-display';
 import Footer from './components/footer';
+import AboutUsDisplay from './displays/about-us-display/about-us-display';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <StepsDisplay/>
       <CardListDisplay/>
       <LinkListDisplay/>
+      <AboutUsDisplay/>
       <ChooseDisplay/>
       <Footer/>
     </BrowserRouter>
