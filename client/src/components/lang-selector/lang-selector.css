@@ -1,0 +1,19 @@
+.lang-selector{
+    position: relative;
+}
+.lang-btn{
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    margin-top: -5px;
+    width: 12px;
+    height: 7px;
+    background-image: url(./chevron.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.lang-selector p{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}

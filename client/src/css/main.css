@@ -60,6 +60,17 @@ button{
     font-weight: 900;
     font-size: 30px;
 }
+.fw-extra-bold{
+    font-weight: 900;
+}
+.gray-bg{
+    background-color: #373737;
+}
+.gray-bg.with-brand{
+    background-image: url(../static/brand-gray-bg.svg);
+    background-position: right 10px bottom 10px;
+    background-repeat: no-repeat;
+}
 .theme-light-bg{
     background-color: #B1ECBB;
 }
@@ -155,28 +166,13 @@ a.btn-theme{
     color: #ffffff;
 }
 .btn-theme:hover{
+    color: #fff;
     background: #B1ECBB;
 }
-.btn-theme-long {
+.btn.large {
     width:100%;
-    background-color: #2dbc4d;
     padding: 15px 60px;
-    color: #ffffff;
-    font-weight: 500;
-    border-radius: 3px;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 3px 7px rgb(0 0 0 / 7%);
-    transition: background 0.3s;
 }
-a.btn-theme-long{
-    color: #ffffff;
-}
-.btn-theme-long:hover{
-    background: #B1ECBB;
-}
-
 .navbar-light .navbar-nav .nav-link.btn-theme{
     color: #fff;
 }

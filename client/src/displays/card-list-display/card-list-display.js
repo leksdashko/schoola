@@ -3,7 +3,7 @@ import {Container, Image} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './card-list-display.css';
-import prepodImage from '../../static/teacher-photo.jpg';
+import prepodImage from '../../static/card-photo.jpg';
 
 const CardListDisplay = () => {
     return (
@@ -13,7 +13,7 @@ const CardListDisplay = () => {
                 <div className="list">
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="teacher-item">
+                            <div className="card-item">
                                 <div className="rotate">
                                     <div className="overlay">
                                         <div className="min-info">
@@ -24,8 +24,8 @@ const CardListDisplay = () => {
                                             <Image src={prepodImage} alt="Преподаватель Иванов Иван" />
                                         </div>
                                     </div>
-                                    <div className="teacher-back-info">
-                                        <div className="top-teacher-data">
+                                    <div className="card-back-info">
+                                        <div className="top-card-data">
                                             <div className="main-info">
                                                 <h4>Иванов Иван</h4>
                                                 <p><Link to="#">Английский язык</Link>, <Link to="#">математика</Link></p>
@@ -35,18 +35,18 @@ const CardListDisplay = () => {
                                                 <Link to="#">72 отзыва</Link>
                                             </div>
                                         </div>
-                                        <div className="last-teacher-data">
+                                        <div className="last-card-data">
                                             <p className="location">Город, район: <Link to="#">Киев</Link>, <Link to="#">Нивки</Link></p>
                                             <p className="price">200 грн/час</p>
                                         </div>
-                                        <Link to="#" className="btn-theme-long">Подать заявку</Link>
-                                        <p className="teacher-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
+                                        <Link to="#" className="btn btn-theme large">Подать заявку</Link>
+                                        <p className="card-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="teacher-item">
+                            <div className="card-item">
                                 <div className="rotate">
                                     <div className="overlay">
                                         <div className="min-info">
@@ -57,8 +57,8 @@ const CardListDisplay = () => {
                                             <Image src={prepodImage} alt="Преподаватель Иванов Иван"/>
                                         </div>
                                     </div>
-                                    <div className="teacher-back-info">
-                                        <div className="top-teacher-data">
+                                    <div className="card-back-info">
+                                        <div className="top-card-data">
                                             <div className="main-info">
                                                 <h4>Иванов Иван</h4>
                                                 <p><Link to="#">Английский язык</Link>, <Link to="#">математика</Link></p>
@@ -68,18 +68,18 @@ const CardListDisplay = () => {
                                                 <Link to="#">72 отзыва</Link>
                                             </div>
                                         </div>
-                                        <div className="last-teacher-data">
+                                        <div className="last-card-data">
                                             <p className="location">Город, район: <Link to="#">Киев</Link>, <Link to="#">Нивки</Link></p>
                                             <p className="price">200 грн/час</p>
                                         </div>
-                                        <Link to="#" className="btn-theme-long">Подать заявку</Link>
-                                        <p className="teacher-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
+                                        <Link to="#" className="btn btn-theme large">Подать заявку</Link>
+                                        <p className="card-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="teacher-item">
+                            <div className="card-item">
                                 <div className="rotate">
                                     <div className="overlay">
                                         <div className="min-info">
@@ -90,8 +90,8 @@ const CardListDisplay = () => {
                                             <Image src={prepodImage} alt="Преподаватель Иванов Иван"/>
                                         </div>
                                     </div>
-                                    <div className="teacher-back-info">
-                                        <div className="top-teacher-data">
+                                    <div className="card-back-info">
+                                        <div className="top-card-data">
                                             <div className="main-info">
                                                 <h4>Иванов Иван</h4>
                                                 <p><Link to="#">Английский язык</Link>, <Link to="#">математика</Link></p>
@@ -101,12 +101,12 @@ const CardListDisplay = () => {
                                                 <Link to="#">72 отзыва</Link>
                                             </div>
                                         </div>
-                                        <div className="last-teacher-data">
+                                        <div className="last-card-data">
                                             <p className="location">Город, район: <Link to="#">Киев</Link>, <Link to="#">Нивки</Link></p>
                                             <p className="price">200 грн/час</p>
                                         </div>
-                                        <Link to="#" className="btn-theme-long">Подать заявку</Link>
-                                        <p className="teacher-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
+                                        <Link to="#" className="btn btn-theme large">Подать заявку</Link>
+                                        <p className="card-more"><Link to="#" className="btn-more">Подробнее о репетиторе</Link></p>
                                     </div>
                                 </div>
                             </div>

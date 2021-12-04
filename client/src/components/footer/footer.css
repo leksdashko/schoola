@@ -1,0 +1,13 @@
+.footer {
+    padding-top: 75px;
+    padding-bottom: 0;
+}
+.footer-list a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.footer-bottom{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}

@@ -57,7 +57,7 @@
     margin-right: 25px;
     margin-left: 25px;
     cursor: pointer;
-    background: url(../../static/chevron-bottom.svg) center center no-repeat;
+    background: url(../../static/chevron-large-bottom.svg) center center no-repeat;
 }
 .opened .search-select-btn {
     transform: rotate(-180deg);
