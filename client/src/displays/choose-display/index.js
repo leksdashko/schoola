@@ -1,3 +1,3 @@
-import ChooseDisplay from "./choose";
+import ChooseDisplay from './choose-display';
 
 export default ChooseDisplay;

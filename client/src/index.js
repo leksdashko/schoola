@@ -11,7 +11,7 @@ export const Context = createContext(null);
 ReactDOM.render(
   <React.StrictMode>
     <Context.Provider value={{
-      user: null
+      user: {isAuth:false}
     }}>
       <App />
     </Context.Provider>

@@ -1,26 +1,16 @@
 import React from 'react';
 import Header from "./components/header";
-import { BrowserRouter } from 'react-router-dom';
-import SearchDisplay from './displays/search-display';
-import ChooseDisplay from './displays/choose-display/choose-display';
-import LinkListDisplay from './displays/link-list-display';
-import StepsDisplay from './displays/steps-display';
-import CardListDisplay from './displays/card-list-display/card-list-display';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/footer';
-import AboutUsDisplay from './displays/about-us-display/about-us-display';
+import AppRouter from './components/AppRouter';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Header/>
-      <SearchDisplay/>
-      <StepsDisplay/>
-      <CardListDisplay/>
-      <LinkListDisplay/>
-      <AboutUsDisplay/>
-      <ChooseDisplay/>
+      <AppRouter/>
       <Footer/>
-    </BrowserRouter>
+    </Router>
   );
 }
 
