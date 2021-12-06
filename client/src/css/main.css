@@ -117,6 +117,12 @@ button{
 .hover-theme-light-cl:hover{
     color: #B1ECBB;
 }
+.hover-theme-bg:hover{
+    background-color: #2DBC4D;
+}
+.hover-theme-light-bg:hover{
+    background-color: #B1ECBB;
+}
 .btn-more {
     font-weight: 500;
     padding-bottom: 1px;

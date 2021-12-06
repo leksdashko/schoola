@@ -1,36 +1,62 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
+
+import { Link } from 'react-router-dom';
+import {Container,Row,Col,Form} from "react-bootstrap";
 
 import './search-display.css';
-import {Container,Row,Col} from "react-bootstrap";
 
 const SearchDisplay = () => {
+    const queryInput = useRef(null);
+    const [active, setActive] = useState(false);
+    const [query, setQuery] = useState('');
+
+    const queryHandler = (e) => {
+        setActive(true);
+        setQuery(e.target.value);
+    }
+
+    const blurHandler = () => {
+        setActive(false);
+    }
+
+    const focusHandler = () => {
+        setActive(true);
+    }
+
+    const toggleQueries = () => {
+        queryInput.current.focus();
+    };
+
     return (
         <div className="search-bar brands-bg">
-            <div className="search-text-wrapper">
-                <Container>
-                    <div className="search-title">
-                        <h2 className="title-font color-gray">Потрібна допомога в навчанні?</h2>
-                        <h1 className="title-font color-gray">Знайди репетитора тут</h1>
-                    </div>
-                </Container>
-            </div>
-            <div className="search-form-wrapper theme-light-bg with-brand">
+            <Container>
+                <h2 className="title-font color-gray">Потрібна допомога в навчанні?</h2>
+                <h1 className="title-font color-gray">Знайди репетитора тут</h1>
+            </Container>
+            <div className={`${active?'active ':''}search-form-wrapper theme-light-bg with-brand`}>
                 <Container>
                     <Row>
-                        <Col md={10}>
-                            <div>
-                                <div className="search-container">
-                                    <input type="text" placeholder="Введите или выберите предмет из списка" />
-                                    <span className="search-select-btn"></span>
+                        <Col md={9}>
+                            <div className="search-container-wrapper">
+                                <Form className="search-container">
+                                    <input value={query} 
+                                        onChange={e => queryHandler(e)} 
+                                        onBlur={e => blurHandler(e)} 
+                                        onFocus={focusHandler}
+                                        ref={queryInput}
+                                        autoCapitalize="off" autoComplete="off" autoCorrect="off"
+                                        type="text" name="query" placeholder="Введіть або виберіть предмет зі списку" />
+                                    <span className="search-select-btn" onClick={toggleQueries}></span>
                                     <button>Знайти репетитора</button>
-                                </div>
-                                <div className="search-queries-wrapper">
-                                    <div className="search-queries">
-                                        <ul>
-                                            <li>Английский язык</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                </Form>
+                                {active
+                                &&
+                                <div className="flex-column search-queries">
+                                    <Link to="#" className="hover-theme-cl">Английский язык</Link>
+                                    <Link to="#" className="hover-theme-cl">Английский язык</Link>
+                                    <Link to="#" className="hover-theme-cl">Английский язык</Link>
+                                    <Link to="#" className="hover-theme-cl">Английский язык</Link>
+                                </div>}
                             </div>
                         </Col>
                     </Row>

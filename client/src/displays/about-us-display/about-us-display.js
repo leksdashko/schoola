@@ -7,7 +7,7 @@ const AboutUsDisplay = () => {
     return (
         <div className="about-us-display brands-bg">
             <Container>
-                <h3 class="title-font">О нас</h3>
+                <h3 className="title-font">О нас</h3>
                 <Row className="justify-content-between">
                     <Col md={5}>
                         <p className="font-description-large">Сервис <span className="theme-color">“Schoola”</span> - это бесплатный и удобный ресурс для поиска репетитора по любому предмету</p>
