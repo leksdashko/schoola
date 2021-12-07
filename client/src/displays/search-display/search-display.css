@@ -23,10 +23,10 @@
     position: relative;
 }
 .search-container {
-    background-color: #fff;
+    background: url(../../static/chevron-large-bottom.svg) right 280px center no-repeat, #fff;
     border-radius: 3px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 3px 7px rgb(0 0 0 / 10%);
 }
@@ -36,9 +36,16 @@
 .search-bar input {
     border-radius: 3px 0 0 3px;
     border: none;
-    width: calc(100% - 320px);
-    padding: 5px 0 5px 85px;
-    background: url(search-book-icon.svg) 40px 4px no-repeat;
+    width: calc(100% - 240px);
+    padding: 30px 0 30px 85px;
+    transition: 0.5s;
+    background-color: transparent;
+    background-image: url(search-book-icon.svg);
+    background-position:  40px 25px;
+    background-repeat: no-repeat;
+}
+.search-bar .active input{
+    background-color: #fff;
 }
 .search-bar button {
     border-radius: 0 3px 3px 0;
@@ -56,20 +63,6 @@
 }
 .search-bar button:hover {
     background: #5bcb6e;
-}
-
-.search-select-btn{
-    width: 50px;
-    height: 50px;
-    margin-right: 25px;
-    margin-left: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-    background: url(../../static/chevron-large-bottom.svg) center center no-repeat;
-}
-.active .search-select-btn {
-    transform: rotate(-180deg);
-    opacity: 0.25;
 }
 
 .search-title h1, .search-title h2 {

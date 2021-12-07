@@ -23,10 +23,6 @@ const SearchDisplay = () => {
         setActive(true);
     }
 
-    const toggleQueries = () => {
-        queryInput.current.focus();
-    };
-
     return (
         <div className="search-bar brands-bg">
             <Container>
@@ -46,7 +42,6 @@ const SearchDisplay = () => {
                                         ref={queryInput}
                                         autoCapitalize="off" autoComplete="off" autoCorrect="off"
                                         type="text" name="query" placeholder="Введіть або виберіть предмет зі списку" />
-                                    <span className="search-select-btn" onClick={toggleQueries}></span>
                                     <button>Знайти репетитора</button>
                                 </Form>
                                 {active
