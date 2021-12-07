@@ -42,6 +42,11 @@ a:hover{
     color: #373737;
     text-decoration: none;
 }
+ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
 button{
     transition: 0.3s;
 }
@@ -189,4 +194,7 @@ a.btn-theme{
 }
 .navbar-light .navbar-nav .nav-link.btn-theme{
     color: #fff;
+}
+.page-wrapper{
+    padding-top: 80px;
 }
