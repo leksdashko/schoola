@@ -15,10 +15,10 @@ const ChooseDisplay = () => {
                 </Row>
                 <Row>
                     <Col md={6}>
-                        <Link to="/signup" className="name-font color-gray hover-theme-cl">Я хочу знайти репетитора</Link>
+                        <Link to="/signup" onClick={()=>console.log('Я хочу знайти репетитора')} className="name-font color-gray hover-theme-cl">Я хочу знайти репетитора</Link>
                     </Col>
                     <Col md={6}>
-                        <Link to="/signup" className="name-font color-gray hover-theme-cl">Я хочу бути репетитором</Link>
+                        <Link to="/signup" onClick={()=>console.log('Я хочу бути репетитором')} className="name-font color-gray hover-theme-cl">Я хочу бути репетитором</Link>
                     </Col>
                 </Row>
             </Container>
