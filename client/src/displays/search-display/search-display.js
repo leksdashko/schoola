@@ -15,8 +15,10 @@ const SearchDisplay = () => {
         setQuery(e.target.value);
     }
 
-    const blurHandler = () => {
-        setActive(false);
+    const blurHandler = (e) => {
+        setTimeout(() => {
+            setActive(false);
+        },100);
     }
 
     const focusHandler = () => {
@@ -37,8 +39,8 @@ const SearchDisplay = () => {
                                 <Form className="search-container">
                                     <input value={query} 
                                         onChange={e => queryHandler(e)} 
-                                        onBlur={e => blurHandler(e)} 
                                         onFocus={focusHandler}
+                                        onBlur={blurHandler}
                                         ref={queryInput}
                                         autoCapitalize="off" autoComplete="off" autoCorrect="off"
                                         type="text" name="query" placeholder="Введіть або виберіть предмет зі списку" />
@@ -47,7 +49,7 @@ const SearchDisplay = () => {
                                 {active
                                 &&
                                 <div className="flex-column search-queries">
-                                    <Link to="#" className="hover-theme-cl">Английский язык</Link>
+                                    <Link to="/login" className="hover-theme-cl">Английский язык</Link>
                                     <Link to="#" className="hover-theme-cl">Английский язык</Link>
                                     <Link to="#" className="hover-theme-cl">Английский язык</Link>
                                     <Link to="#" className="hover-theme-cl">Английский язык</Link>

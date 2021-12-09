@@ -76,6 +76,9 @@ button{
 .fw-extra-bold{
     font-weight: 900;
 }
+.fw-light-bold{
+    font-weight: 600;
+}
 .gray-bg{
     background-color: #373737;
 }
@@ -127,6 +130,12 @@ button{
 }
 .hover-theme-light-bg:hover{
     background-color: #B1ECBB;
+}
+.underline{
+    border-bottom: 1px solid #373737;
+}
+.hover-no-underline:hover{
+    border-bottom: 1px solid transparent;
 }
 .btn-more {
     font-weight: 500;
@@ -191,6 +200,32 @@ a.btn-theme{
 .btn.large {
     width:100%;
     padding: 15px 60px;
+}
+.form-group{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.field {
+    border: none;
+    max-height: 100px;
+    min-height: 50px;
+    font-size: 16px;
+    border-bottom: 1px solid #373737;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.field-error, .has-error .field {
+    color: #FF6359;
+    border-bottom: 1px solid #FF6359;
+}
+label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0;
+    position: relative;
 }
 .navbar-light .navbar-nav .nav-link.btn-theme{
     color: #fff;

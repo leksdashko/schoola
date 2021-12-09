@@ -12,7 +12,7 @@ const Auth = () => {
                 <p className="title-font">Вхід</p>
 
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-5">
                         <form>                  
                             <div className="form-group">
                                 <label className="control-label" for="loginform-email">E-mail</label>
@@ -33,11 +33,11 @@ const Auth = () => {
             <div className="theme-light-bg with-brand page-floor">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6 text-center">
-                            <a className="" href="/remind">Не пам'ятаю пароль</a>
+                        <div className="col-5 text-center">
+                            <a className="fw-light-bold underline hover-no-underline" href="/remind">Не пам'ятаю пароль</a>
                             <p className="other-option mt-3">
                                 У Вас ще немає профілю?  
-                                <a className="" href="/signup">Зареєструватися</a>
+                                <a className="fw-light-bold underline hover-no-underline m-2" href="/signup">Зареєструватися</a>
                             </p>
                         </div>
                     </div>
