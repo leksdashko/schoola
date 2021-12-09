@@ -1,5 +1,6 @@
-import Auth from "./pages/auth/auth"
-import Main from "./pages/main/main"
+import Auth from "./pages/auth"
+import Main from "./pages/main"
+import Signup from "./pages/signup"
 
 export const authRoutes = [
     {
@@ -16,5 +17,9 @@ export const publicRoutes = [
     {
         path: '/login',
         Component: Auth
+    },
+    {
+        path: '/signup',
+        Component: Signup
     }
 ]

@@ -1,0 +1,9 @@
+.signup-page{
+    max-height: 700px;
+}
+.split-content, .signup-page .page-wrapper > .container{
+    height: 100%;
+}
+.signup-page .breadcrumbs span {
+    color: #3abc4d;
+}
