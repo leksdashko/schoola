@@ -7,3 +7,15 @@
 .signup-page .breadcrumbs span {
     color: #3abc4d;
 }
+.signup-page form button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.signup-page .steps{
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+.signup-page .steps button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
