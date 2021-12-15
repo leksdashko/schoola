@@ -1,6 +1,7 @@
 import Auth from "./pages/auth"
 import Main from "./pages/main"
 import Signup from "./pages/signup"
+import Teachers from "./pages/teachers"
 
 export const authRoutes = [
     {
@@ -21,5 +22,9 @@ export const publicRoutes = [
     {
         path: '/signup',
         Component: Signup
+    },
+    {
+        path: '/teachers',
+        Component: Teachers
     }
 ]
