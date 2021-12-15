@@ -66,6 +66,10 @@ button.text{
     line-height: 64px;
     font-weight: 900;
 }
+.name-font-small {
+    font-weight: 900;
+    font-size: 24px;
+}
 .name-font{
     font-weight: 900;
     font-size: 30px;

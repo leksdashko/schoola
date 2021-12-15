@@ -1,0 +1,15 @@
+.vertical-card{
+    box-shadow: 0 3px 7px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    background: #fdfdfd;
+}
+.cover{
+    padding: 25px 30px;
+}
+.vertical-card .img-wrapper{
+    height: 165px;
+    overflow: hidden;
+}
+.vertical-card .img-wrapper img{
+    min-width: 100%;
+}
