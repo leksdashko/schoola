@@ -140,7 +140,14 @@ button.text{
 .hover-theme-light-bg:hover{
     background-color: #B1ECBB;
 }
-.underline{
+.underline {
+    border-bottom: 1px solid #373737;
+}
+.hover-underline{
+    transition: 0.2s;
+    border-bottom: 1px solid transparent;
+}
+.hover-underline:hover{
     border-bottom: 1px solid #373737;
 }
 .hover-no-underline:hover{
@@ -256,4 +263,48 @@ label {
 }
 .split-background{
     display: flex;
+}
+.rating{
+    width: 75px;
+}
+.rating span{
+    display: block;
+    font-weight: 900;
+    font-size: 26px;
+    color: #373737;
+    text-align: right;
+    line-height: 26px;
+    background: url(../static/star.svg) top right 42px no-repeat;
+}
+.rating a{
+    color: #373737;
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    margin-top: 2px;
+}
+.rating a:hover{
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    text-decoration: underline;
+}
+.like {
+    background-image: url(../static/like-ico.svg);
+    display: inline-block;
+    cursor: pointer;
+    width: 27px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+    opacity: 0.75;
+}
+.like.active {
+    background-image: url(../static/like-ico-active.svg);
+}
+.like:hover{
+    opacity: 1;
 }

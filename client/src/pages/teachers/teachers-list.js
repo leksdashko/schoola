@@ -21,16 +21,16 @@ const Teachers = () => {
 
                 <div className="content">
                     <Row>
-                        <Col md={9}>
+                        <Col md={8}>
                             <Row>
                                 {items.map(() => 
-                                    <Col md={5}>
+                                    <Col md={6}>
                                         <VerticalCard/>
                                     </Col>
                                 )}
                             </Row>
                         </Col>
-                        <Col md={3}>
+                        <Col md={4}>
                             <Filter/>
                         </Col>
                     </Row>
