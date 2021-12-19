@@ -7,13 +7,15 @@ import DefaultCard from '../default-card/default-card';
 
 import './vertical-card.css';
 
-const VerticalCard = () => {
+const VerticalCard = ({id = 1}) => {
+    const itemUrl = `/teachers/${id}`;
+
     return (
         <div class="vertical-card">
-            <Link to="/teacher/1234591" class="img-wrapper">
+            <Link to={itemUrl} class="img-wrapper">
                 <Image src={photo} alt="Викладач Олександр"/>
             </Link>
-            <DefaultCard/>
+            <DefaultCard id={id}/>
         </div>
     );
 };

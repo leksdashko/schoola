@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 import './default-card.css';
 
-const DefaultCard = () => {
+const DefaultCard = ({id}) => {
     const [isFavorite, setFaforite] = useState(false);
+    const itemUrl = `/teachers/${id}`;
 
     const toggleFavorite = () => {
         setFaforite(!isFavorite);
@@ -14,7 +15,7 @@ const DefaultCard = () => {
         <div className="cover">
             <div className="d-flex justify-content-between">
                 <div className="main-info">
-                    <Link to="/teacher/1234591" className="name-font-small hover-theme-light-cl" title="Викладач Олександр">Олександр</Link>
+                    <Link to={itemUrl} className="name-font-small hover-theme-light-cl" title="Викладач Олександр">Олександр</Link>
                     <div className="mt-1">
                         <Link to="?cat=1" className="fw-light-bold hover-underline">Англійська мова</Link>
                     </div>
@@ -35,7 +36,7 @@ const DefaultCard = () => {
                 </div>
                 <div className="text-center mt-2">
                     <button className="btn btn-theme large mb-4">Подать заявку</button>
-                    <Link className="btn-more" to="/teacher/1234591">Детальніше про репетитора</Link>
+                    <Link className="btn-more" to={itemUrl}>Детальніше про репетитора</Link>
                 </div>
             </div>
         </div>

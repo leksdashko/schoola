@@ -5,7 +5,9 @@ import './rotate-card.css';
 import prepodImage from '../../../static/card-photo.jpg';
 import DefaultCard from '../default-card/default-card';
 
-const RotateCard = () => {
+const RotateCard = ({id = 1}) => {
+    const itemUrl = `/teachers/${id}`;
+
     return (
         <div className="rotate-card">
             <div className="rotate">
@@ -18,7 +20,7 @@ const RotateCard = () => {
                         <Image src={prepodImage} alt="Преподаватель Иванов Иван" />
                     </div>
                 </div>
-                <DefaultCard/>
+                <DefaultCard id={id}/>
             </div>
         </div>
     );
