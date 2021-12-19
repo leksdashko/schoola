@@ -1,3 +1,8 @@
-.vertical-card{
+.teachers-page .vertical-card{
     margin-bottom: 30px;
+}
+.teachers-page .page-floor{
+    margin-top: -335px;
+    padding: 350px 0 85px;
+    text-align: center;
 }

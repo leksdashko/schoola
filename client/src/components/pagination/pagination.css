@@ -1,0 +1,30 @@
+.pagination > *{
+    display: inline-block;
+    width: 45px;
+    line-height: 45px;
+    font-size: 18px;
+}
+.pagination .arrow{
+    opacity: 0.75;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.2s;
+}
+.pagination .arrow:hover{
+    opacity: 1;
+    margin-top: -5px;
+}
+.pagination .prev{
+    background-image: url(./left.svg);
+}
+.pagination .next{
+    background-image: url(./right.svg);
+}
+.pagination a:hover{
+    font-size: 22px;
+    color: #2DBC4D;
+}
+.pagination .active{
+    font-size: 26px;
+    color: #2DBC4D;
+}

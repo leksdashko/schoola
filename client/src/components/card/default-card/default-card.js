@@ -18,7 +18,7 @@ const DefaultCard = () => {
                     <div className="mt-1">
                         <Link to="?cat=1" className="fw-light-bold hover-underline">Англійська мова</Link>
                     </div>
-                    <div className="location mt-2">
+                    <div className="location mt-3">
                         <span className="fw-light-bold">Місто: </span> 
                         <Link to="#">Київ</Link>
                     </div>
@@ -33,7 +33,7 @@ const DefaultCard = () => {
                     <p className="name-font-small">700 грн/год</p>
                     <div className={`like${isFavorite?' active':''}`} onClick={() => toggleFavorite()}></div>
                 </div>
-                <div className="text-center mt-3">
+                <div className="text-center mt-2">
                     <button className="btn btn-theme large mb-4">Подать заявку</button>
                     <Link className="btn-more" to="/teacher/1234591">Детальніше про репетитора</Link>
                 </div>

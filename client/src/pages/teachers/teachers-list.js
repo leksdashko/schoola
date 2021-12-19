@@ -6,12 +6,13 @@ import Sorter from '../../components/sorter';
 import Filter from '../../components/filter';
 
 import './teachers.css';
+import Pagination from '../../components/pagination/pagination';
 
 const Teachers = () => {
     const items = [1,2,3,4,5,6,7];
 
     return (
-        <div className="auth-page page-wrapper">
+        <div className="teachers-page page-wrapper">
             <Container>
                 <Breadcrumbs/>
                         
@@ -36,7 +37,15 @@ const Teachers = () => {
                     </Row>
                 </div>
             </Container>
-            
+            <div className="theme-light-bg with-brand page-floor">
+                <Container>
+                    <Row>
+                        <div className="col-md-8 text-center">
+                            <Pagination/>
+                        </div>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 };
