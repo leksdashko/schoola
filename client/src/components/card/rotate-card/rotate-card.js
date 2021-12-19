@@ -11,8 +11,8 @@ const RotateCard = () => {
             <div className="rotate">
                 <div className="overlay">
                     <div className="min-info">
-                        <h4>Иванов Иван</h4>
-                        <p>Английский язык, математика</p>
+                        <h4>Іванов Іван</h4>
+                        <p>Английска мова, математика</p>
                     </div>
                     <div className="overlay-img-wrap">
                         <Image src={prepodImage} alt="Преподаватель Иванов Иван" />
