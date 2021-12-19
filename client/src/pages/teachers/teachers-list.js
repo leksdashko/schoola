@@ -1,7 +1,7 @@
 import React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import {Container, Row, Col} from "react-bootstrap";
-import VerticalCard from '../../components/card/vertical-card';
+import { VerticalCard } from '../../components/card';
 import Sorter from '../../components/sorter';
 import Filter from '../../components/filter';
 

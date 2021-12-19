@@ -3,7 +3,7 @@ import {Image} from 'react-bootstrap';
 
 import './rotate-card.css';
 import prepodImage from '../../../static/card-photo.jpg';
-import DefaultCard from '../default-card/default-card';
+import { DefaultCard } from '..';
 
 const RotateCard = ({id = 1}) => {
     const itemUrl = `/teachers/${id}`;

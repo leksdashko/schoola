@@ -3,8 +3,7 @@ import {Image, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 import photo from '../../../static/card-photo.jpg';
-import DefaultCard from '../default-card/default-card';
-
+import { DefaultCard } from '..';
 import './vertical-card.css';
 
 const VerticalCard = ({id = 1}) => {

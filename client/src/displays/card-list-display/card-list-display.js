@@ -2,7 +2,7 @@ import React from 'react';
 import {Container} from 'react-bootstrap';
 
 import './card-list-display.css';
-import RotateCard from '../../components/card/rotate-card/rotate-card';
+import { RotateCard } from '../../components/card';
 
 const CardListDisplay = () => {
     const items = [1,2,3];
