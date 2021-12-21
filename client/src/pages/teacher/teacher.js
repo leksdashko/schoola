@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Breadcrumbs from '../../components/breadcrumbs';
 import Schedule from '../../components/schedule/schedule';
 
@@ -76,8 +77,8 @@ const Teacher = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="theme-btn">Оставить отзыв</a>
-                                <p class="more-wrap text-center"><a href="#" class="more-btn">Посмотреть больше отзывов</a></p>
+                                <Link to="#" class="theme-btn">Оставить отзыв</Link>
+                                <p class="more-wrap text-center"><Link to="#" class="more-btn">Посмотреть больше отзывов</Link></p>
                             </div>
                         </div>
                     </div>
@@ -87,14 +88,14 @@ const Teacher = () => {
                                 <div class="title">
                                     <h1>Иванова Анна</h1>
                                 </div>
-                                <p class="subjects"><a href="#">Английский язык</a>, <a href="#">математика</a></p>
+                                <p class="subjects"><Link to="#">Английский язык</Link>, <Link to="#">математика</Link></p>
                                 <p class="price">200 грн/час</p>
                                 <div class="btns-wrapper">
                                     <div class="btn">
-                                        <a href="#" class="theme-btn">Подать заявку</a>
+                                        <Link to="#" class="theme-btn">Подать заявку</Link>
                                     </div>
                                     <div class="btn">
-                                        <a href="#" class="transparent-btn">Добавить в избранное</a>
+                                        <Link to="#" class="transparent-btn">Добавить в избранное</Link>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +152,7 @@ const Teacher = () => {
                                             <p><b>Дипломы:</b></p>
                                         </div>
                                         <div class="col-sm-8">
-                                            <p><a href="#">Диплом магистра КНТУА</a></p>
+                                            <p><Link to="#">Диплом магистра КНТУА</Link></p>
                                         </div>
                                     </div>
                                 </div>
@@ -185,7 +186,7 @@ const Teacher = () => {
                                             <p><b>Дипломы:</b></p>
                                         </div>
                                         <div class="col-sm-8">
-                                            <p><a href="#">Диплом магистра КНТУА</a></p>
+                                            <p><Link to="#">Диплом магистра КНТУА</Link></p>
                                         </div>
                                     </div>
                                 </div>
@@ -197,11 +198,11 @@ const Teacher = () => {
                             <div class="info-block">
                                 <div class="title"><h4>Блог репетитора:</h4></div>
                                 <ul class="articles">
-                                    <li><a href="#">7 психологических методов изучения английского языка</a></li>
-                                    <li><a href="#">Зачем использовать черновик во время сдачи ЗНО по английскому</a></li>
-                                    <li><a href="#">7 психологических методов изучения английского языка</a></li>
+                                    <li><Link to="#">7 психологических методов изучения английского языка</Link></li>
+                                    <li><Link to="#">Зачем использовать черновик во время сдачи ЗНО по английскому</Link></li>
+                                    <li><Link to="#">7 психологических методов изучения английского языка</Link></li>
                                 </ul>
-                                <a href="#" class="theme-btn">Все блоги репетитора</a>
+                                <Link to="#" class="theme-btn">Все блоги репетитора</Link>
                             </div>
                         </div>
                     </div>

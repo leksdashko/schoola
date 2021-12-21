@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './pagination.css';
 
 const Pagination = () => {
     return (
         <div className="pagination justify-content-center fw-extra-bold">
-            <a href="#" className="arrow prev"></a>
-            <a href="#">1</a>
-            <a href="#">2</a>
+            <Link to="#" className="arrow prev"></Link>
+            <Link to="#">1</Link>
+            <Link to="#">2</Link>
             <span className="active">3</span>
-            <a href="#">4</a>
-            <a href="#">5</a>
+            <Link to="#">4</Link>
+            <Link to="#">5</Link>
             <span>...</span>
-            <a href="#">24</a>
-            <a href="#">25</a>
-            <a href="#" className="arrow next"></a>
+            <Link to="#">24</Link>
+            <Link to="#">25</Link>
+            <Link to="#" className="arrow next"></Link>
         </div>
     );
 };

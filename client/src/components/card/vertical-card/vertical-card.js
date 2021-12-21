@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Row} from "react-bootstrap";
+import {Image} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 import photo from '../../../static/card-photo.jpg';

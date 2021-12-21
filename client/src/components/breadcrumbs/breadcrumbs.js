@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './breadcrumbs.css';
 
@@ -6,7 +7,7 @@ const Breadcrumbs = () => {
     return (
         <div className="breadcrumbs">
             <ul>
-                <li><a href="/" title="Schoola - Знайди репетитора для себе">Головна</a></li>
+                <li><Link to="/" title="Schoola - Знайди репетитора для себе">Головна</Link></li>
                 <li><span>Вхід</span></li>
             </ul>
         </div>

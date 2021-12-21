@@ -13,8 +13,8 @@ const CardListDisplay = () => {
                 <h3 className="title-font color-white">Популярні вчителі:</h3>
                 <div className="list">
                     <div className="row">
-                        {items.map(() => 
-                            <div className="col-md-4">
+                        {items.map((id) => 
+                            <div key={id} className="col-md-4">
                                 <RotateCard/>
                             </div>
                         )}

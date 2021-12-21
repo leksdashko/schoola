@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ListGroup, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 import './sorter.css';
 
@@ -10,8 +10,8 @@ const Sorter = () => {
         'Високий рейтинг',
         'Кількість відгуків',
         'Великий досвід',
-        'Сама низька ціна',
-        'Самая высокая цена'
+        'Найменша ціна',
+        'Найвища ціна'
     ];
 
     return (
