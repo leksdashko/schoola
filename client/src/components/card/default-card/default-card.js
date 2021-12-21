@@ -21,7 +21,7 @@ const DefaultCard = ({id}) => {
                     </div>
                     <div className="location mt-3">
                         <span className="fw-light-bold">Місто: </span> 
-                        <Link to="#">Київ</Link>
+                        <Link to="#" className="hover-underline">Київ</Link>
                     </div>
                 </div>
                 <div className="rating">
@@ -35,7 +35,7 @@ const DefaultCard = ({id}) => {
                     <div className={`like${isFavorite?' active':''}`} onClick={() => toggleFavorite()}></div>
                 </div>
                 <div className="text-center mt-2">
-                    <button className="btn btn-theme large mb-4">Подать заявку</button>
+                    <button className="btn btn-theme large mb-4 w-100">Подать заявку</button>
                     <Link className="btn-more" to={itemUrl}>Детальніше про репетитора</Link>
                 </div>
             </div>

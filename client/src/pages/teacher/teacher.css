@@ -1,0 +1,17 @@
+.testimonials-widget{
+    padding: 30px;
+}
+.info-widget .data{
+    padding: 30px;
+}
+.info-widget .image{
+    overflow: hidden;
+    height: 265px;
+    -webkit-box-shadow: 0 3px 7px rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 7px rgb(0 0 0 / 15%);
+}
+.info-widget .image img{
+    min-width: 100%;
+    max-width: 100%;
+}

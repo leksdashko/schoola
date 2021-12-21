@@ -55,6 +55,9 @@ button.text{
     border: none;
     padding: 0;
 }
+.w-100{
+    width: 100%;
+}
 .logo {
     font-weight: 900;
     font-size: 36px;
@@ -213,9 +216,14 @@ a.btn-theme{
     color: #fff;
     background: #B1ECBB;
 }
+.btn{
+    min-width: 300px;
+}
 .btn.large {
-    width:100%;
     padding: 15px 60px;
+}
+.btn.btn-outline-theme.large{
+    padding: 15px 56px;
 }
 .form-group{
     padding-top: 10px;
@@ -307,4 +315,11 @@ label {
 }
 .like:hover{
     opacity: 1;
+}
+.widget{
+    box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    margin-bottom: 25px;
 }

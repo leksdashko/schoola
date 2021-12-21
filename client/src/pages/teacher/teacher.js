@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../../components/breadcrumbs';
 import Schedule from '../../components/schedule/schedule';
 
 import './teacher.css';
+import photo from '../../static/card-photo.jpg';
 
 const Teacher = () => {
     return (
@@ -13,101 +14,97 @@ const Teacher = () => {
 
                 <Breadcrumbs/>
 
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="left-bar">
-                            <div class="widget info-widget">
-                                <div class="image">
-                                    <img src="img/teacher-photo.jpg" alt="Преподаватель Иванова Анна"/>
-                                </div>
-                                <div class="data">
-                                    <p><b>Последний вход на сайт:</b> 1 час назад</p>
-                                    <p><b>Опыт работы:</b> 11 лет</p>
-                                    <p><b>Место занятий:</b> У ученика, онлайн</p>
-                                    <p><b>Город, район:</b> Киев, Нивки</p>
-                                    <p><b>Возраст учеников: </b> 6-35 лет</p>
-                                </div>
+                <Row>
+                    <Col md={4}>
+                        <div className="widget info-widget">
+                            <div className="image">
+                                <Image src={photo} alt="Преподаватель Иванова Анна"/>
                             </div>
-                            <div class="widget testimonials-widget">
-                                <div class="top">
-                                <div class="title">
+                            <div className="data">
+                                <p><b>Последний вход на сайт:</b> 1 час назад</p>
+                                <p><b>Опыт работы:</b> 11 лет</p>
+                                <p><b>Место занятий:</b> У ученика, онлайн</p>
+                                <p><b>Город, район:</b> Киев, Нивки</p>
+                                <p className='mb-0'><b>Возраст учеников: </b> 6-35 лет</p>
+                            </div>
+                        </div>
+                            <div className="widget testimonials-widget">
+                                <div className="top">
+                                <div className="title">
                                     <h2>Отзывы (72 отзыва):</h2>
                                 </div>
-                                <div class="rating">
+                                <div className="rating">
                                     <span>4.9</span>
                                 </div>
                             </div>
-                                <div class="testimonials">
-                                    <div class="review">
-                                        <div class="image">
+                                <div className="testimonials">
+                                    <div className="review">
+                                        <div className="image">
                                             <img src="img/min-pupil-image.jpg" alt=""/>
                                         </div>
-                                        <div class="data">
-                                            <div class="top">
+                                        <div className="data">
+                                            <div className="top">
                                                 <h3>Трофимов Влад</h3>
                                                 <span>10.02.2020</span>
                                             </div>
-                                            <p class="description" data-height="">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак. Занимаюсь с методистом и репетитором, все уроки проходят легко, быстро, а самое главное насыщено! Всегда выношу для себя что-то новое. Материал подаётся разнообразно, из-за чего легче усваивать информацию.</p>
+                                            <p className="description" data-height="">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак. Занимаюсь с методистом и репетитором, все уроки проходят легко, быстро, а самое главное насыщено! Всегда выношу для себя что-то новое. Материал подаётся разнообразно, из-за чего легче усваивать информацию.</p>
                                             <button data-replace="Свернуть отзыв">Показать весь отзыв</button>
                                         </div>
                                     </div>
-                                    <div class="review">
-                                        <div class="image">
+                                    <div className="review">
+                                        <div className="image">
                                             <img src="img/min-pupil-image.jpg" alt=""/>
                                         </div>
-                                        <div class="data opened">
-                                            <div class="top">
+                                        <div className="data opened">
+                                            <div className="top">
                                                 <h3>Трофимов Влад</h3>
                                                 <span>10.02.2020</span>
                                             </div>
-                                            <p class="description">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак.</p>
+                                            <p className="description">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак.</p>
                                         </div>
                                     </div>
-                                    <div class="review">
-                                        <div class="image">
+                                    <div className="review">
+                                        <div className="image">
                                             <img src="img/min-pupil-image.jpg" alt=""/>
                                         </div>
-                                        <div class="data">
-                                            <div class="top">
+                                        <div className="data">
+                                            <div className="top">
                                                 <h3>Трофимов Влад</h3>
                                                 <span>10.02.2020</span>
                                             </div>
-                                            <p class="description" data-height="">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак. Занимаюсь с методистом и репетитором, все уроки проходят легко, быстро, а самое главное насыщено! Всегда выношу для себя что-то новое. Материал подаётся разнообразно, из-за чего легче усваивать информацию.</p>
+                                            <p className="description" data-height="">В этом году сдаю английский на профильном уровне, поэтому без репетитора никак. Занимаюсь с методистом и репетитором, все уроки проходят легко, быстро, а самое главное насыщено! Всегда выношу для себя что-то новое. Материал подаётся разнообразно, из-за чего легче усваивать информацию.</p>
                                             <button data-replace="Свернуть отзыв">Показать весь отзыв</button>
                                         </div>
                                     </div>
                                 </div>
-                                <Link to="#" class="theme-btn">Оставить отзыв</Link>
-                                <p class="more-wrap text-center"><Link to="#" class="more-btn">Посмотреть больше отзывов</Link></p>
+                                <Link to="#" className="theme-btn">Оставить отзыв</Link>
+                                <p className="more-wrap text-center"><Link to="#" className="more-btn">Посмотреть больше отзывов</Link></p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="single-content">
-                            <div class="top">
-                                <div class="title">
-                                    <h1>Иванова Анна</h1>
+                    </Col>
+                    <Col md={8}>
+                        <div className="ps-3">
+                            <div className="top">
+                                <div className="title">
+                                    <h1 className="title-font">Олександр</h1>
                                 </div>
-                                <p class="subjects"><Link to="#">Английский язык</Link>, <Link to="#">математика</Link></p>
-                                <p class="price">200 грн/час</p>
-                                <div class="btns-wrapper">
-                                    <div class="btn">
-                                        <Link to="#" class="theme-btn">Подать заявку</Link>
-                                    </div>
-                                    <div class="btn">
-                                        <Link to="#" class="transparent-btn">Добавить в избранное</Link>
-                                    </div>
+                                <div>
+                                    <Link to="#" className='fw-light-bold hover-underline'>Английский язык</Link>, <Link to="#" className='fw-light-bold hover-underline'>математика</Link>
+                                </div>
+                                <p className="name-font mt-3">200 грн/час</p>
+                                <div className="mb-4">
+                                    <button className="btn btn-theme large">Подать заявку</button>
+                                    <button className="btn btn-outline-theme large ms-3">Зберегти</button>
                                 </div>
                             </div>
-                            <div class="info-block">
-                                <div class="title"><h4>О репетиторе:</h4></div>
-                                <div class="description">
+                            <div className="info-block">
+                                <div className="title"><h4>О репетиторе:</h4></div>
+                                <div className="description">
                                     <p>Английский язык - современные методы изучения, быстро, качественно, эффективно, все уровни - от начинающего до продвинутого. Индивидуальный подход - для каждого ученика составляется индивидуальная программа учитывая цели изучения (для работы, для переезда за рубеж, для общения с англоязычными партнерами, подготовки к сдачи экзаменов и т.д.). Преподаванием занимаюсь с 2009 года. Одно время проживала в США, в Нью-Йорке. Английский - это легко, полезно и просто необходимо!</p>
                                 </div>
                             </div>
-                            <div class="info-block">
-                                <div class="title"><h4>Уровни преподавания:</h4></div>
-                                <div class="levels-wrapper">
+                            <div className="info-block">
+                                <div className="title"><h4>Уровни преподавания:</h4></div>
+                                <div className="levels-wrapper">
                                     <span>Подготовка к ЗНО (ВНО)</span>
                                     <span>Подготовка к ДПА (ГИА) (9 класс)</span>
                                     <span>7 - 9 классы</span>
@@ -120,93 +117,93 @@ const Teacher = () => {
                                     <span>Разговорный язык</span>
                                 </div>
                             </div>
-                            <div class="info-block">
-                                <div class="title"><h4>Образование:</h4></div>
-                                <div class="education">
-                                    <div class="row">
-                                        <div class="col">
+                            <div className="info-block">
+                                <div className="title"><h4>Образование:</h4></div>
+                                <div className="education">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Учебное заведение:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>Киевский национальный торгово-экономический университет</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Степень:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>магистр</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Год окончания:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>2014</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Дипломы:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p><Link to="#">Диплом магистра КНТУА</Link></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="education">
-                                    <div class="row">
-                                        <div class="col">
+                                <div className="education">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Учебное заведение:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>Киевский национальный торгово-экономический университет</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Степень:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>магистр</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Год окончания:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p>2014</p>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div className="row">
+                                        <div className="col">
                                             <p><b>Дипломы:</b></p>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div className="col-sm-8">
                                             <p><Link to="#">Диплом магистра КНТУА</Link></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="info-block">
-                                <div class="title"><h4>Расписание репетитора:</h4></div>
+                            <div className="info-block">
+                                <div className="title"><h4>Расписание репетитора:</h4></div>
                                 <Schedule/>
                             </div>
-                            <div class="info-block">
-                                <div class="title"><h4>Блог репетитора:</h4></div>
-                                <ul class="articles">
+                            <div className="info-block">
+                                <div className="title"><h4>Блог репетитора:</h4></div>
+                                <ul className="articles">
                                     <li><Link to="#">7 психологических методов изучения английского языка</Link></li>
                                     <li><Link to="#">Зачем использовать черновик во время сдачи ЗНО по английскому</Link></li>
                                     <li><Link to="#">7 психологических методов изучения английского языка</Link></li>
                                 </ul>
-                                <Link to="#" class="theme-btn">Все блоги репетитора</Link>
+                                <Link to="#" className="theme-btn">Все блоги репетитора</Link>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </Container>
         </div>
     );
