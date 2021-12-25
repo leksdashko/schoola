@@ -8,3 +8,15 @@ const User = sequelize.define('user', {
     password: {type: DataTypes.STRING},
     phone: {type: DataTypes.STRING, unique: true}
 });
+
+const Cart = sequelize.define('cart', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
+});
+
+User.hasOne(Cart)
+Cart.belongsTo(User)
+
+module.exports = {
+    User,
+    Cart
+}
