@@ -53,25 +53,25 @@ const Teacher = () => {
                             </div>
                             <div className="info-block mt-5">
                                 <h4 className="name-font-small mb-3">Рівні викладання:</h4>
-                                <div className="levels-wrapper">
-                                    <span>Подготовка к ЗНО (ВНО)</span>
-                                    <span>Подготовка к ДПА (ГИА) (9 класс)</span>
-                                    <span>7 - 9 классы</span>
-                                    <span>Разговорный язык</span>
-                                    <span>TOEFL, IELTS</span>
-                                    <span>7 - 9 классы</span>
-                                    <span>TOEFL, IELTS</span>
-                                    <span>Подготовка к ДПА (ГИА) (9 класс)</span>
-                                    <span>7 - 9 классы</span>
-                                    <span>Разговорный язык</span>
+                                <div>
+                                    <span className="tag tag-theme me-2">Подготовка к ЗНО (ВНО)</span>
+                                    <span className="tag tag-theme me-2">Подготовка к ДПА (ГИА) (9 класс)</span>
+                                    <span className="tag tag-theme me-2">7 - 9 классы</span>
+                                    <span className="tag tag-theme me-2">Разговорный язык</span>
+                                    <span className="tag tag-theme me-2">TOEFL, IELTS</span>
+                                    <span className="tag tag-theme me-2">7 - 9 классы</span>
+                                    <span className="tag tag-theme me-2">TOEFL, IELTS</span>
+                                    <span className="tag tag-theme me-2">Подготовка к ДПА (ГИА) (9 класс)</span>
+                                    <span className="tag tag-theme me-2">7 - 9 классы</span>
+                                    <span className="tag tag-theme me-2">Разговорный язык</span>
                                 </div>
                             </div>
                             <div className="info-block mt-5">
-                                <h4 className="name-font-small mb-3">Освіта</h4>
-                                <div className="education">
+                                <h4 className="name-font-small">Освіта</h4>
+                                <div className="education border-bottom py-3">
                                     <div className="row">
                                         <div className="col">
-                                            <p><b>Учебное заведение:</b></p>
+                                            <b>Учебное заведение:</b>
                                         </div>
                                         <div className="col-sm-8">
                                             <p>Киевский национальный торгово-экономический университет</p>
@@ -98,11 +98,11 @@ const Teacher = () => {
                                             <p><b>Дипломы:</b></p>
                                         </div>
                                         <div className="col-sm-8">
-                                            <p><Link to="#">Диплом магистра КНТУА</Link></p>
+                                            <button className="btn-link-theme">Диплом магистра КНТУА</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="education">
+                                <div className="education pt-4">
                                     <div className="row">
                                         <div className="col">
                                             <p><b>Учебное заведение:</b></p>
@@ -132,7 +132,7 @@ const Teacher = () => {
                                             <p><b>Дипломы:</b></p>
                                         </div>
                                         <div className="col-sm-8">
-                                            <p><Link to="#">Диплом магистра КНТУА</Link></p>
+                                            <button className="btn-link-theme">Диплом магистра КНТУА</button>
                                         </div>
                                     </div>
                                 </div>

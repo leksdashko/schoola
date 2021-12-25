@@ -9,9 +9,6 @@
 .schedule .line {
     border-top: 1px solid #d5d5d5;
 }
-.schedule .line:last-child{
-    border-bottom: 1px solid #d5d5d5;
-}
 .schedule .line:hover .cell:first-child {
     color: #2DBC4D;
 }
@@ -24,9 +21,17 @@
     font-weight: 600;
     padding: 10px 0 8px;
     cursor: pointer;
+    border-right: 1px dotted #f3f3f3;
     -webkit-transition: 0.1s;
     -moz-transition: 0.1s;
     -ms-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s;
+}
+.schedule .cell:last-child{
+    border-right: none;
+}
+.schedule .line .cell.blocked{
+    text-align: right;
+    padding-right: 15px;
 }
