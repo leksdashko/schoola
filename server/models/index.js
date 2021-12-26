@@ -1,15 +1,15 @@
-const User = require('./user-model');
-const Cart = require('./cart-model');
-const Token = require('./token-model');
+const UserModel = require('./user-model');
+const CartModel = require('./cart-model');
+const TokenModel = require('./token-model');
 
-User.hasOne(Cart);
-Cart.belongsTo(User);
+UserModel.hasOne(CartModel);
+CartModel.belongsTo(UserModel);
 
-User.hasOne(Token)
-Token.belongsTo(User)
+UserModel.hasOne(TokenModel)
+TokenModel.belongsTo(UserModel)
 
 module.exports = {
-    User,
-    Cart,
-    Token
+    UserModel,
+    CartModel,
+    TokenModel
 }

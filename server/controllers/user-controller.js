@@ -1,4 +1,3 @@
-const { col } = require('sequelize/dist');
 const userService = require('../services/user-service');
 
 class UserController {

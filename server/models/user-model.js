@@ -1,7 +1,7 @@
 const sequelize = require('../db');
 const {DataTypes} = require('sequelize');
 
-const User = sequelize.define('user', {
+const UserModel = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     email: {type: DataTypes.STRING, unique: true},
     name: {type: DataTypes.STRING},
@@ -11,4 +11,4 @@ const User = sequelize.define('user', {
     activationLink: {type: DataTypes.STRING}
 });
 
-module.exports = User;
+module.exports = UserModel;

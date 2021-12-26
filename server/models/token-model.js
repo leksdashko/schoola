@@ -1,8 +1,8 @@
 const sequelize = require('../db');
 const {DataTypes} = require('sequelize');
 
-const Token = sequelize.define('token', {
+const TokenModel = sequelize.define('token', {
     refreshToken: {type: DataTypes.STRING, required: true}
 });
 
-module.exports = Token;
+module.exports = TokenModel;
