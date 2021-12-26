@@ -5,7 +5,7 @@ const models = require('./models');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const fileUpload = require('express-fileupload');
-const router = require('./routes/index');
+const router = require('./routes');
 //const errorHandler = require('./middleware/ErrorHandingMiddleware');
 const path = require('path');
 
