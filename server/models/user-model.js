@@ -6,17 +6,9 @@ const User = sequelize.define('user', {
     email: {type: DataTypes.STRING, unique: true},
     name: {type: DataTypes.STRING},
     password: {type: DataTypes.STRING},
-    phone: {type: DataTypes.STRING, unique: true}
+    phone: {type: DataTypes.STRING, unique: true},
+    isActivated: {type: DataTypes.BOOLEAN, default: false},
+    activationLink: {type: DataTypes.STRING}
 });
 
-const Cart = sequelize.define('cart', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
-});
-
-User.hasOne(Cart)
-Cart.belongsTo(User)
-
-module.exports = {
-    User,
-    Cart
-}
+module.exports = User;
