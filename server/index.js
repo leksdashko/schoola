@@ -8,6 +8,7 @@ const fileUpload = require('express-fileupload');
 const router = require('./routes');
 //const errorHandler = require('./middleware/ErrorHandingMiddleware');
 const path = require('path');
+const errorMiddleware = require('./middleware/error-middleware');
 
 const PORT = process.env.PORT || 5000;
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, 'static')));
 app.use(fileUpload({}));
 app.use('/api', router);
+app.use(errorMiddleware);
 
 //it's the last middleware
 //app.use(errorHandler);
