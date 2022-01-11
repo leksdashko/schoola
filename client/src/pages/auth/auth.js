@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import { Link } from 'react-router-dom';
 import {Container, Row, Col, Form} from "react-bootstrap";
+import { Context } from '../..';
 
 import './auth.css';
 
 const Auth = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const {store} = useContext(Context);
+
     return (
         <div className="auth-page page-wrapper">
             <Container>
@@ -15,19 +20,34 @@ const Auth = () => {
 
                 <Row>
                     <Col md={5}>
-                        <Form>                  
+                        <div>                  
                             <Form.Group className="mb-4">
                                 <Form.Label className="mb-0">E-mail</Form.Label>
-                                <input type="email" className="field w-100" name="email" placeholder="Введіть Вашу e-mail адресу" autoFocus/>
+                                <input 
+                                    onChange={e => setEmail(e.target.value)}
+                                    value={email}
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Введіть Вашу e-mail адресу" 
+                                    className="field w-100" 
+                                    autoFocus
+                                />
                             </Form.Group>
                             <Form.Group>
                             <Form.Label className="mb-0">Пароль</Form.Label>
-                                <input type="password" className="field w-100" name="password" placeholder="********"/>
+                                <input 
+                                    onChange={e => setPassword(e.target.value)}
+                                    value={password}
+                                    type="password"
+                                    name="password" 
+                                    placeholder="********"
+                                    className="field w-100" 
+                                />
                             </Form.Group>
                             <div className="text-center mt-5">
-                                <button type="submit" className="btn btn-theme">Увійти</button> 
+                                <button onClick={() => store.login(email,password)} type="submit" className="btn btn-theme">Увійти</button> 
                             </div>
-                        </Form>
+                        </div>
                     </Col>
                 </Row>
             </Container>

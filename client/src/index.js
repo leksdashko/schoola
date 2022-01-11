@@ -5,13 +5,18 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/fonts.css';
 import './css/main.css';
+import Store from './store/store';
 
-export const Context = createContext(null);
+const store = new Store();
+
+export const Context = createContext({
+  store
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <Context.Provider value={{
-      user: {isAuth:false}
+      store
     }}>
       <App />
     </Context.Provider>

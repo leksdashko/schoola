@@ -10,11 +10,11 @@ const NotFound = () => {
 }
 
 const AppRouter = () => {
-    const {user} = useContext(Context);
+    const {store} = useContext(Context);
 
     return (
         <Routes>
-            {user.isAuth && authRoutes.map(({path, Component}) =>
+            {store.isAuth && authRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={<Component />} exact />
             )}
             {publicRoutes.map(({path, Component}) =>
