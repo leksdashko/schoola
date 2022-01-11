@@ -1,5 +1,6 @@
-import React, { useEffect, useState }  from 'react';
-//import {Context} from '../../index';
+import React, { useContext, useEffect, useState }  from 'react';
+import { Context } from '../..';
+import { observer } from 'mobx-react-lite';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from 'react-router-dom';
@@ -8,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import './header.css';
 
 const Header = () => {
+    const {store} = useContext(Context);
     const [fixed, setFixed] = useState('');
 
     useEffect(() => {
@@ -34,14 +36,19 @@ const Header = () => {
                         <Link className="nav-link" to="/how-it-works">Як це працює?</Link>
                         <Link className="nav-link" to="/favorites">Вибрані</Link>
                     </Nav>
-                    <Nav>
-                        <Link className="me-3 btn-outline-theme nav-link me-3" to="/signup">Стати репетитором</Link>
-                        <Link className="btn-theme nav-link" to="/login">Увійти</Link>
-                    </Nav>
+                    {store.isAuth 
+                    ?
+                        <button onClick={() => store.logout()} className="btn-outline-theme">Вийти</button>
+                    :
+                        <Nav>
+                            <Link className="me-3 btn-outline-theme nav-link me-3" to="/signup">Стати репетитором</Link>
+                            <Link className="btn-theme nav-link" to="/login">Увійти</Link>
+                        </Nav>
+                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
 };
 
-export default Header;
+export default observer(Header);

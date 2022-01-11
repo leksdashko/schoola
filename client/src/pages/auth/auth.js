@@ -20,7 +20,7 @@ const Auth = () => {
 
                 <Row>
                     <Col md={5}>
-                        <div>                  
+                        <div className="form">                  
                             <Form.Group className="mb-4">
                                 <Form.Label className="mb-0">E-mail</Form.Label>
                                 <input 

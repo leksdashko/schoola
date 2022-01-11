@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import { Link } from 'react-router-dom';
 import {Container, Row, Col, Form} from "react-bootstrap";
+import { Context } from '../..';
 
 import './signup.css';
 
 const Signup = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const {store} = useContext(Context);
+
     return (
         <div className="signup-page page-split">
             <div className="split-background">
@@ -34,10 +39,18 @@ const Signup = () => {
                         <div className="offset-md-1 col-md-5">
                             <p className="fw-light-bold mb-4">Крок 2 з 2</p>
 
-                            <Form>                  
+                            <div className="form">                  
                                 <Form.Group className="mb-4">
                                     <Form.Label className="mb-0">E-mail</Form.Label>
-                                    <input type="email" className="field w-100" name="email" placeholder="Введіть Вашу e-mail адресу" autoFocus/>
+                                    <input 
+                                        onChange={e => setEmail(e.target.value)}
+                                        value={email}
+                                        type="email" 
+                                        name="email" 
+                                        placeholder="Введіть Вашу e-mail адресу" 
+                                        className="field w-100" 
+                                        autoFocus
+                                    />
                                 </Form.Group>
                                 <Row className="mb-4">
                                     <Col>
@@ -57,7 +70,14 @@ const Signup = () => {
                                     <Col>
                                         <Form.Group>
                                             <Form.Label className="mb-0">Придумайте пароль</Form.Label>
-                                            <input type="password" className="field w-100" name="password" placeholder="********"/>
+                                            <input 
+                                                onChange={e => setPassword(e.target.value)}
+                                                value={password}
+                                                type="password" 
+                                                name="password" 
+                                                placeholder="********"
+                                                className="field w-100" 
+                                            />
                                         </Form.Group>
                                     </Col>
                                     <Col>
@@ -69,9 +89,9 @@ const Signup = () => {
                                 </Row>
                                 
                                 <div className="text-center mt-5">
-                                    <button type="submit" className="btn btn-theme">Створити профіль</button> 
+                                    <button onClick={() => store.registration(email,password)} type="submit" className="btn btn-theme">Створити профіль</button> 
                                 </div>
-                            </Form>
+                            </div>
                         </div>
                     </Row>
                 </Container>
