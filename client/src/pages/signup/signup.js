@@ -52,20 +52,6 @@ const Signup = () => {
                                         autoFocus
                                     />
                                 </Form.Group>
-                                <Row className="mb-4">
-                                    <Col>
-                                        <Form.Group>
-                                            <Form.Label className="mb-0">Ім'я</Form.Label>
-                                            <input type="text" className="field w-100" name="name" placeholder="Ваше ім'я"/>
-                                        </Form.Group>
-                                    </Col>
-                                    <Col>
-                                        <Form.Group>
-                                            <Form.Label className="mb-0">Номер телефону</Form.Label>
-                                            <input type="phone" className="field w-100" name="phone" placeholder="(0XX) XXX XX XX"/>
-                                        </Form.Group>
-                                    </Col>
-                                </Row>
                                 <Row>
                                     <Col>
                                         <Form.Group>
