@@ -4,15 +4,19 @@ const userController = require('../controllers/user-controller');
 const {body} = require('express-validator');
 const authMiddleware = require('../middleware/auth-middleware');
 
-router.post('/registration',
+router.post('/',
     body('email').isEmail(),
     body('password').isLength({min: 8, max: 32}),
+    body('confirmPassword').custom((value, {req}) => {
+        if (value !== req.body.password) {
+          throw new Error('Паролі не співпадають');
+        }
+
+        return true;
+    }),
     userController.registration
 );
-router.post('/login', userController.login);
-router.post('/logout', userController.logout);
 router.get('/activate/:link', userController.activate);
-router.get('/refresh', userController.refresh);
 router.get('/', authMiddleware, userController.getUsers);
 
 module.exports = router;

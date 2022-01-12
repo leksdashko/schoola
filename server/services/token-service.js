@@ -2,9 +2,13 @@ const jwt = require('jsonwebtoken');
 const tokenModel = require('../models/token-model');
 
 class TokenService {
+    ACCESS_TOKEN_DURATION = '30m';
+    REFRESH_TOKEN_DURATION = '30d';
+    REFRESH_TOKEN_MAX_AGE = 30*24*60*60*1000;
+
     generateTokens(payload) {
-        const accessToken = jwt.sign(payload, process.env.JWT_ACCESS_SECRET, {expiresIn:'30m'});
-        const refreshToken = jwt.sign(payload, process.env.JWT_REFRESH_SECRET, {expiresIn:'30d'});
+        const accessToken = jwt.sign(payload, process.env.JWT_ACCESS_SECRET, {expiresIn:this.ACCESS_TOKEN_DURATION});
+        const refreshToken = jwt.sign(payload, process.env.JWT_REFRESH_SECRET, {expiresIn:this.REFRESH_TOKEN_DURATION});
 
         return {
             accessToken,

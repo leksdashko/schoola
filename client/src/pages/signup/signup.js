@@ -9,6 +9,7 @@ import './signup.css';
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const {store} = useContext(Context);
 
     return (
@@ -69,13 +70,20 @@ const Signup = () => {
                                     <Col>
                                         <Form.Group>
                                             <Form.Label className="mb-0">Підтвердіть пароль</Form.Label>
-                                            <input type="password" className="field w-100" name="confirmPassword" placeholder="********"/>
+                                            <input 
+                                                onChange={e => setConfirmPassword(e.target.value)}
+                                                value={confirmPassword}
+                                                type="password" 
+                                                name="confirmPassword" 
+                                                placeholder="********"
+                                                className="field w-100"
+                                            />
                                         </Form.Group>
                                     </Col>
                                 </Row>
                                 
                                 <div className="text-center mt-5">
-                                    <button onClick={() => store.registration(email,password)} type="submit" className="btn btn-theme">Створити профіль</button> 
+                                    <button onClick={() => store.registration(email,password,confirmPassword)} type="submit" className="btn btn-theme large">Створити профіль</button> 
                                 </div>
                             </div>
                         </div>
