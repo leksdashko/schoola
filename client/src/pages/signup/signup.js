@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import { Link } from 'react-router-dom';
 import {Container, Row, Col, Form} from "react-bootstrap";
@@ -6,11 +6,78 @@ import { Context } from '../..';
 
 import './signup.css';
 
+const useValidation = (value, validations) => {
+    const [isEmpty, setEmpty] = useState(true);
+    const [minLengthError, setMinLengthError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [inputValid, setInputValid] = useState(false);
+
+    useEffect(() => {
+        let isValid = true;
+
+        for (const validation in validations) {
+            switch(validation){
+                case 'minLength':
+                    isValid = value.length >= validations[validation];
+                    setMinLengthError(!isValid);
+                    break;
+                case 'isEmpty':
+                    isValid = value;
+                    setEmpty(!isValid);
+                    break;
+                case 'isEmail':
+                    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    isValid = re.test(String(value).toLowerCase());
+                    setEmailError(!isValid);
+                    break;
+            }
+        }
+    }, [value]);
+
+    useEffect(() => {
+        if(isEmpty || minLengthError || emailError){
+            setInputValid(false);
+        } else {
+            setInputValid(true);
+        }
+    }, [isEmpty, minLengthError, emailError]);
+
+    return {
+        isEmpty,
+        minLengthError,
+        emailError,
+        inputValid
+    }
+}
+
+const useInput = (initialValue, validations) => {
+    const [value, setValue] = useState(initialValue);
+    const [isDirty, setDirty] = useState(false);
+    const valid = useValidation(value, validations);
+
+    const onChange = (e) => {
+        setValue(e.target.value);
+    }
+
+    const onBlur = (e) => {
+        setDirty(true);
+    }
+
+    return {
+        value,
+        onChange,
+        onBlur,
+        ...valid,
+        isDirty
+    }
+}
+
 const Signup = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
     const {store} = useContext(Context);
+
+    const email = useInput('', {isEmpty: true, isEmail: true});
+    const password = useInput('', {isEmpty: true, minLength: 8});
+    const confirmPassword = useInput('', {isEmpty: true, minLength: 8});
 
     return (
         <div className="signup-page page-split">
@@ -44,22 +111,25 @@ const Signup = () => {
                                 <Form.Group className="mb-4">
                                     <Form.Label className="mb-0">E-mail</Form.Label>
                                     <input 
-                                        onChange={e => setEmail(e.target.value)}
-                                        value={email}
+                                        onBlur={e => email.onBlur(e)}
+                                        onChange={e => email.onChange(e)}
+                                        value={email.value}
                                         type="email" 
                                         name="email" 
                                         placeholder="Введіть Вашу e-mail адресу" 
                                         className="field w-100" 
                                         autoFocus
                                     />
+                                    {(email.isDirty && email.isEmpty) && <div class="error">Error</div>}
                                 </Form.Group>
                                 <Row>
                                     <Col>
                                         <Form.Group>
                                             <Form.Label className="mb-0">Придумайте пароль</Form.Label>
                                             <input 
-                                                onChange={e => setPassword(e.target.value)}
-                                                value={password}
+                                                onBlur={e => password.onBlur(e)}
+                                                onChange={e => password.onChange(e)}
+                                                value={password.value}
                                                 type="password" 
                                                 name="password" 
                                                 placeholder="********"
@@ -71,8 +141,9 @@ const Signup = () => {
                                         <Form.Group>
                                             <Form.Label className="mb-0">Підтвердіть пароль</Form.Label>
                                             <input 
-                                                onChange={e => setConfirmPassword(e.target.value)}
-                                                value={confirmPassword}
+                                                onBlur={e => confirmPassword.onBlur(e)}
+                                                onChange={e => confirmPassword.onChange(e)}
+                                                value={confirmPassword.value}
                                                 type="password" 
                                                 name="confirmPassword" 
                                                 placeholder="********"
@@ -83,7 +154,11 @@ const Signup = () => {
                                 </Row>
                                 
                                 <div className="text-center mt-5">
-                                    <button onClick={() => store.registration(email,password,confirmPassword)} type="submit" className="btn btn-theme large">Створити профіль</button> 
+                                    <button 
+                                        disabled={!email.inputValid || !password.inputValid || !confirmPassword.inputValid}
+                                        onClick={() => store.registration(email,password,confirmPassword)} 
+                                        type="submit" 
+                                        className="btn btn-theme large">Створити профіль</button> 
                                 </div>
                             </div>
                         </div>

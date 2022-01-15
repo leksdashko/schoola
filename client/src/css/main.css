@@ -266,6 +266,9 @@ a.btn-theme{
     -o-transition: 0.3s;
     transition: 0.3s;
 }
+.field:focus{
+    border-bottom: 1px solid #2dbc4d;
+}
 .field-error, .has-error .field {
     color: #FF6359;
     border-bottom: 1px solid #FF6359;
