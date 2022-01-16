@@ -273,6 +273,10 @@ a.btn-theme{
     color: #FF6359;
     border-bottom: 1px solid #FF6359;
 }
+.has-error .error-text{
+    color: #fa675d;
+    font-size: 12px;
+}
 label {
     font-size: 12px;
     font-weight: 600;
