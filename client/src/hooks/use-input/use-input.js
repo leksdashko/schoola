@@ -19,6 +19,7 @@ const useInput = (initialValue, validations) => {
         onChange,
         onBlur,
         ...valid,
+        errorMessage: isDirty && valid.errors[0],
         isDirty
     }
 }

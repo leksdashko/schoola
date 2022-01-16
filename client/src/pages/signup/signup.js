@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
 import { Link } from 'react-router-dom';
 import {Container, Row, Col, Form} from "react-bootstrap";
@@ -10,13 +10,33 @@ import './signup.css';
 const Signup = () => {
     const {store} = useContext(Context);
 
-    const email = useInput('', {isEmpty: true, isEmail: true});
+    const email = useInput('', {isEmail: true, isEmpty: true});
     const password = useInput('', {isEmpty: true, minLength: 8});
-    const confirmPassword = useInput('', {isEmpty: true, minLength: 8});
+    const confirmPassword = useInput('', {
+        isEmpty: true, 
+        minLength: 8,
+        compare: {
+            value: password.value, 
+            message: 'Паролі не співпадають'
+        }
+    });
 
-    const emailErrorMessage = email.isDirty && email.errorMessage;
-    const passwordErrorMessage = password.isDirty && password.errorMessage;
-    const confirmPasswordErrorMessage = confirmPassword.isDirty && confirmPassword.errorMessage;
+    const [isFormValid, setValidForm] = useState(false);
+
+    useEffect(() => {
+        if(email.isDirty && password.isDirty && confirmPassword.isDirty){
+            setValidForm(true);
+        }
+
+        if(email.errorMessage || password.errorMessage || confirmPassword.errorMessage){
+            setValidForm(false);
+        }
+
+    }, [email, password, confirmPassword]);
+
+    const validation = () => {
+        store.registration(email.value,password.value,confirmPassword.value);
+    }
 
     return (
         <div className="signup-page page-split">
@@ -47,7 +67,7 @@ const Signup = () => {
                             <p className="fw-light-bold mb-4">Крок 2 з 2</p>
 
                             <div className="form">                  
-                                <Form.Group className={`mb-4${emailErrorMessage ? ' has-error' : ''}`}>
+                                <Form.Group className={`mb-4${email.errorMessage ? ' has-error' : ''}`}>
                                     <Form.Label className="mb-0">E-mail</Form.Label>
                                     <input 
                                         onBlur={e => email.onBlur(e)}
@@ -59,11 +79,11 @@ const Signup = () => {
                                         className="field w-100" 
                                         autoFocus
                                     />
-                                    {emailErrorMessage && <div className="error-text">{emailErrorMessage}</div>}
+                                    {email.errorMessage && <div className="error-text">{email.errorMessage}</div>}
                                 </Form.Group>
                                 <Row>
                                     <Col>
-                                        <Form.Group className={`${passwordErrorMessage ? ' has-error' : ''}`}>
+                                        <Form.Group className={`${password.errorMessage ? ' has-error' : ''}`}>
                                             <Form.Label className="mb-0">Придумайте пароль</Form.Label>
                                             <input 
                                                 onBlur={e => password.onBlur(e)}
@@ -74,11 +94,11 @@ const Signup = () => {
                                                 placeholder="********"
                                                 className="field w-100" 
                                             />
-                                            {passwordErrorMessage && <div className="error-text">{passwordErrorMessage}</div>}
+                                            {password.errorMessage && <div className="error-text">{password.errorMessage}</div>}
                                         </Form.Group>
                                     </Col>
                                     <Col>
-                                        <Form.Group className={`${confirmPasswordErrorMessage ? ' has-error' : ''}`}>
+                                        <Form.Group className={`${confirmPassword.errorMessage ? ' has-error' : ''}`}>
                                             <Form.Label className="mb-0">Підтвердіть пароль</Form.Label>
                                             <input 
                                                 onBlur={e => confirmPassword.onBlur(e)}
@@ -89,15 +109,15 @@ const Signup = () => {
                                                 placeholder="********"
                                                 className="field w-100"
                                             />
-                                            {confirmPasswordErrorMessage && <div className="error-text">{confirmPasswordErrorMessage}</div>}
+                                            {confirmPassword.errorMessage && <div className="error-text">{confirmPassword.errorMessage}</div>}
                                         </Form.Group>
                                     </Col>
                                 </Row>
                                 
                                 <div className="text-center mt-5">
                                     <button 
-                                        disabled={emailErrorMessage || passwordErrorMessage || confirmPasswordErrorMessage}
-                                        onClick={() => store.registration(email,password,confirmPassword)} 
+                                        disabled={!isFormValid}
+                                        onClick={() => validation()} 
                                         type="submit" 
                                         className="btn btn-theme large">Створити профіль</button> 
                                 </div>

@@ -12,9 +12,8 @@ class UserService {
         if(candidate){
             throw ApiError.BadRequest(`Користувач з такою email адресою вже існує`);
         }
-
-        const isPassEquals = await bcrypt.compare(password, confirmPassword);
-        if(!isPassEquals) {
+        
+        if(password !== confirmPassword) {
             throw ApiError.BadRequest('Паролі не співпадають');
         }
 
