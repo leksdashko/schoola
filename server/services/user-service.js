@@ -20,6 +20,10 @@ class UserService {
             throw ApiError.BadRequest('Паролі не співпадають');
         }
 
+        if(role != this.SELLER_ROLE && role != this.CLIENT_ROLE){
+            throw ApiError.BadRequest('Напишіть нам, якщо є пропозиція');
+        }
+
         const hashPassword = await bcrypt.hash(password, 3);
         const activationLink = uuid.v4();
         const user = await UserModel.create({email, password: hashPassword, role, activationLink});
