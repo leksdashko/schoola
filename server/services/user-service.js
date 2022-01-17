@@ -20,6 +20,8 @@ class UserService {
             throw ApiError.BadRequest('Паролі не співпадають');
         }
 
+        console.log(role);
+
         if(role != this.SELLER_ROLE && role != this.CLIENT_ROLE){
             throw ApiError.BadRequest('Напишіть нам, якщо є пропозиція');
         }

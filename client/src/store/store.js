@@ -50,6 +50,7 @@ export default class Store {
             const response = await AuthService.login(email, password);
             console.log(response);
             localStorage.setItem('token', response.data.accessToken);
+            this.setClient(false);
             this.setAuth(true);
             this.setUser(response.data.user);
         }catch(e){
@@ -62,6 +63,7 @@ export default class Store {
             const response = await UserService.registration(email, password, confirmPassword, isClient);
             console.log(response);
             localStorage.setItem('token', response.data.accessToken);
+            this.setClient(false);
             this.setAuth(true);
             this.setUser(response.data.user);
         }catch(e){
