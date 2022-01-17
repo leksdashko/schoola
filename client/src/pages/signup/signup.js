@@ -21,7 +21,12 @@ const Signup = () => {
         }
     });
 
+    const [isClient, setClient] = useState(store.getClient());
     const [isFormValid, setValidForm] = useState(false);
+
+    useEffect(() => {
+        store.setClient(isClient);
+    }, [isClient, store]);
 
     useEffect(() => {
         if(email.isDirty && password.isDirty && confirmPassword.isDirty){
@@ -35,7 +40,7 @@ const Signup = () => {
     }, [email, password, confirmPassword]);
 
     const validation = () => {
-        store.registration(email.value,password.value,confirmPassword.value);
+        store.registration(email.value,password.value,confirmPassword.value,isClient);
     }
 
     return (
@@ -54,8 +59,12 @@ const Signup = () => {
                             <div className="steps">
                                 <p className="fw-light-bold">Крок 1 з 2</p>
 
-                                <button className="text name-font color-gray hover-theme-cl">Я шукаю репетитора</button>
-                                <button className="text name-font color-gray hover-theme-cl">Я хочу стати репетитором</button>
+                                <button 
+                                    onClick={() => setClient(true)}
+                                    className={`text name-font ${isClient?'theme-color':'color-gray hover-theme-cl'}`}>Я шукаю репетитора</button>
+                                <button 
+                                    onClick={() => setClient(false)}
+                                    className={`text name-font ${!isClient?'theme-color':'color-gray hover-theme-cl'}`}>Я хочу стати репетитором</button>
                             </div>
 
                             <p className="mt-3">

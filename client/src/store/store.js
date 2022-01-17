@@ -8,6 +8,7 @@ export default class Store {
     user = {};
     isAuth = false;
     isLoading = false;
+    isClient = false;
 
     constructor() {
         makeAutoObservable(this);
@@ -25,6 +26,25 @@ export default class Store {
         this.isLoading = bool;
     }
 
+    setClient(client){
+        if(client){
+            localStorage.setItem('isClient', true);
+        }else{
+            localStorage.removeItem('isClient');
+        }
+
+        this.isClient = client;
+    }
+
+    getClient(){
+        const storageResult = localStorage.getItem('isClient');
+        if(storageResult){
+            return true;
+        }
+
+        return this.isClient;
+    }
+
     async login(email, password) {
         try{
             const response = await AuthService.login(email, password);
@@ -37,9 +57,9 @@ export default class Store {
         }
     }
 
-    async registration(email, password, confirmPassword) {
+    async registration(email, password, confirmPassword, isClient) {
         try{
-            const response = await UserService.registration(email, password, confirmPassword);
+            const response = await UserService.registration(email, password, confirmPassword, isClient);
             console.log(response);
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
